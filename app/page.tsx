@@ -18,7 +18,7 @@ export default function Home() {
           Fale Conosco
         </button>
       </div>
-      <div className="flex flex-col min-h-screen flex-1 pl-[100px] py-[70px] overflow-y-scroll">
+      <div className="flex flex-col bg-white min-h-screen flex-1 pl-[100px] py-[70px] overflow-y-scroll">
         <span className="text-primary text-[73px] font-semibold">
           Faça Login
         </span>
