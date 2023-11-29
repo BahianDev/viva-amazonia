@@ -120,7 +120,7 @@ export function ProductionCycleForm() {
       {/* Submit Button */}
       <button
         type="submit"
-        className="max-w-[197px] pt-[15px] pb-[15px] pl-[40px] pr-[40px] bg-secondary text-[15px] font-semibold rounded-xl hover:scale-105 mt-[120px] absolute bottom-8"
+        className="max-w-[197px] pt-[15px] pb-[15px] pl-[40px] pr-[40px] bg-secondary text-[15px] font-semibold rounded-xl hover:scale-105 mt-[120px]"
       >
         Próximo Passo
       </button>
