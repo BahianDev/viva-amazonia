@@ -25,11 +25,11 @@ export default function Home() {
         <span className="text-primary text-[20px] font-semibold mt-[125px]">
           Seu CPF
         </span>
-        <input className="w-[80%] min-h-[73px] max-w-[90%]  border-2 rounded-2xl focus:ring-secondary focus:ring-inset focus:ring-2 focus:shadow-secondary focus:border-secondary focus:outline-none" />
+        <input className="w-[80%] min-h-[73px] max-w-[90%] border-primary  border-2 rounded-2xl focus:ring-secondary focus:ring-inset focus:ring-2 focus:shadow-secondary focus:border-secondary focus:outline-none" />
         <span className="text-primary text-[20px] font-semibold mt-[60px]">
           Senha
         </span>
-        <input className="w-[80%] min-h-[73px] max-w-[90%]  border-2 rounded-2xl focus:ring-secondary focus:ring-inset focus:ring-2 focus:shadow-secondary focus:border-secondary focus:outline-none" />
+        <input className="w-[80%] min-h-[73px] max-w-[90%] border-primary border-2 rounded-2xl focus:ring-secondary focus:ring-inset focus:ring-2 focus:shadow-secondary focus:border-secondary focus:outline-none" />
         <span className="cursor-pointer text-secondary text-[13px] font-medium underline decoration-2">
           Esqueci minha sennha
         </span>
