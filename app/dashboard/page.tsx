@@ -22,7 +22,7 @@ export default function Dashboard() {
   }, []);
 
   useEffect(() => {
-    if (Number(screenSize) <= 960) {
+    if (Number(screenSize) <= 768) {
       setActiveMenu(false);
     } else {
       setActiveMenu(true);
@@ -46,9 +46,9 @@ export default function Dashboard() {
             activeMenu ? "md:ml-72" : "flex-2"
           }`}
         >
-          <div className="flex  items-center justify-between">
+          <div className="flex items-center justify-between">
             <span
-              className="rounded-full text-4xl"
+              className="flex md:hidden rounded-full text-4xl"
               onClick={() => setActiveMenu((prevActiveMenu) => !prevActiveMenu)}
             >
               <AiOutlineMenu />
