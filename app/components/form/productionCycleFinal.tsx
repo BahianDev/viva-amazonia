@@ -55,7 +55,7 @@ export function ProductionCycleFinalForm() {
       onSubmit={handleSubmit(onHandleFormSubmit)}
     >
       {/* Area Size Input */}
-      <label className="text-primary text-[21px] font-semibold">
+      <label className="text-primary text-2xl font-semibold">
         Tamanho de área plantada
       </label>
       <input

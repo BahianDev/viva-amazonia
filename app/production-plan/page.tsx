@@ -27,13 +27,13 @@ function ActiveStepFormComponent() {
 export default function ProductionPlan() {
   return (
     <main className="flex max-h-screen">
-      <div className="flex flex-col	 bg-primary min-h-screen min-w-[20%] p-80px rounded-r-3xl relative">
+      <div className="hidden md:flex  flex-col justify-between h-screen bg-primary md:overflow-hidden overflow-auto md:hover:overflow-auto px-6 py-6">
         <Image src={"/logo.svg"} alt="logo" width={62} height={62} />
         <span className="text-secondary text-6xl font-semibold mt-[12px]">
           Culturas
         </span>
       </div>
-      <div className="flex bg-white flex-col min-h-screen flex-1 pl-[100px] py-[70px] overflow-y-scroll">
+      <div className="flex bg-white flex-col min-h-screen flex-1 px-6 py-[70px] overflow-y-scroll">
         <ActiveStepFormComponent />
       </div>
     </main>

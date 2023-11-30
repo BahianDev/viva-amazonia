@@ -25,7 +25,7 @@ export function ProductionCycleForm() {
       className="flex gap-1 flex-col space-y-3"
       onSubmit={handleSubmit(onHandleFormSubmit)}
     >
-      <label className="flex flex-col text-primary text-[30px] font-semibold">
+      <label className="flex flex-col text-primary text-2xl font-semibold">
         Informe o ciclo de produção
       </label>
 

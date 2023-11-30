@@ -16,7 +16,7 @@ export function Success() {
           alt="check"
         />
       </div>
-      <span className="text-primary font-semibold text-[70px] text-center">
+      <span className="text-primary font-semibold text-6xl text-center">
         Parabéns, você cadastrou sua propriedade
       </span>
       <Link href={'/dashboard'}>

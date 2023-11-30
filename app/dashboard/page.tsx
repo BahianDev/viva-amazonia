@@ -49,7 +49,7 @@ export default function Dashboard() {
 
 
         <div className="flex  items-center justify-between">
-          <span className="text-[#75B83B] text-[61px] font-semibold">
+          <span className="text-[#75B83B] text-5xl font-semibold">
             Bem Vindo
           </span>
           <Image
@@ -60,7 +60,7 @@ export default function Dashboard() {
             className="w-[64px] h-[64px]"
           />
         </div>
-        <div className="flex flex-col md:flex-row items-center px-[33px] py-[37px] rounded-[24px] border-apoioazulpistache border-[1px] bg-white justify-between">
+        <div className="flex flex-col md:flex-row items-center px-[33px] py-[37px] rounded-[24px] border-apoioazulpistache border-[1px] bg-white justify-between mt-6">
           <Image
             src={"/circle.svg"}
             width={51}
