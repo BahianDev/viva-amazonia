@@ -60,7 +60,7 @@ export default function Dashboard() {
             className="w-[64px] h-[64px]"
           />
         </div>
-        <div className="flex flex-col md:flex-row items-center px-[33px] py-[37px] rounded-[24px] border-apoioazulpistache border-[1px] bg-white justify-between mt-6">
+        <div className="flex flex-col md:flex-row items-center px-[33px] py-[37px] rounded-[24px] border-apoioazulpistache border-[1px] gap-5 bg-white  mt-6">
           <Image
             src={"/circle.svg"}
             width={51}
@@ -68,13 +68,13 @@ export default function Dashboard() {
             alt="circle"
             className="w-[51px] h-[51px]"
           />
-          <span className="text-primary text-[28px] font-bold text-center">
+          <span className="text-primary text-2xl font-bold text-center md:text-left">
             Faltam 60% do seu cadastro ser concluído para ter acesso a mais
             benefícios
           </span>
           <Link
             href={"/production-plan"}
-            className="pt-[8px] pb-[8px] pl-[22px] pr-[22px] bg-secondary text-[12px] text-center font-semibold rounded-xl hover:scale-105"
+            className="pt-[8px] pb-[8px] pl-[22px] pr-[22px] bg-secondary text-sm text-center font-semibold rounded-xl hover:scale-105"
           >
             Continue seu Cadastro
           </Link>
