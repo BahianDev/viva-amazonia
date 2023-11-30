@@ -10,7 +10,7 @@ const Sidebar = () => {
       {activeMenu && (
         <>
           <div className="flex justify-between">
-            <Image src={"/logo_dark.svg"} alt="logo" width={62} height={62} />
+            <Image src={"/logo_dark.svg"} alt="logo" width={62} height={62} priority/>
             <button
               type="button"
               onClick={() => setActiveMenu((prevActiveMenu) => !prevActiveMenu)}
@@ -26,6 +26,7 @@ const Sidebar = () => {
                 alt="dashboard icon"
                 width={24}
                 height={24}
+                priority
               />
               <span className="text-primary text-[24px] font-semibold ml-[14px]">
                 Dashboard
@@ -37,6 +38,7 @@ const Sidebar = () => {
                 alt="dashboard icon"
                 width={24}
                 height={24}
+                priority
               />
               <span className="text-primary text-[24px] font-semibold ml-[14px]">
                 Plano Produtivo
@@ -48,6 +50,7 @@ const Sidebar = () => {
                 alt="dashboard icon"
                 width={24}
                 height={24}
+                priority
               />
               <span className="text-primary text-[24px] font-semibold ml-[14px]">
                 Seus benefícios
@@ -59,6 +62,7 @@ const Sidebar = () => {
                 alt="dashboard icon"
                 width={24}
                 height={24}
+                priority
               />
               <span className="text-primary text-[24px] font-semibold ml-[14px]">
                 Configurações
