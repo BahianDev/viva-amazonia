@@ -42,7 +42,7 @@ export default function Dashboard() {
           </div>
         )}
         <div
-          className={`dark:bg-main-bg bg-main-bg min-h-screen w-full p-2 ${
+          className={`dark:bg-main-bg bg-[#F9F9F9] min-h-screen w-full px-6 py-6 ${
             activeMenu ? "md:ml-72" : "flex-2"
           }`}
         >
