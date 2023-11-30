@@ -3,66 +3,52 @@ import Image from "next/image";
 import Link from "next/link";
 import { useFormState } from "../contexts/FormContext";
 import { formatHash } from "../utils/formatHash";
+import Sidebar from "../components/sidebar";
+import { useEffect } from "react";
 
 export default function Dashboard() {
-  const { formData } = useFormState();
+  const { formData, activeMenu, screenSize, setScreenSize, setActiveMenu } =
+    useFormState();
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      // Your client-side code that uses window goes here
+      const handleResize = () => setScreenSize(window.innerWidth);
+      window.addEventListener("resize", handleResize);
+      handleResize();
+      return () => window.removeEventListener("resize", handleResize);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (Number(screenSize) <= 960) {
+      setActiveMenu(false);
+    } else {
+      setActiveMenu(true);
+    }
+  }, [screenSize]);
 
   return (
-    <main className="flex max-h-screen">
-      <div className="flex flex-col	 bg-white min-h-screen min-w-[20%] p-80px rounded-r-3xl relative">
-        <Image src={"/logo_dark.svg"} alt="logo" width={62} height={62} />
-        <div className="flex flex-col gap-[50px] mt-[100px]">
-          <div className="flex items-center cursor-pointer">
-            <Image
-              src={"/dashboard.svg"}
-              alt="dashboard icon"
-              width={24}
-              height={24}
-            />
-            <span className="text-primary text-[24px] font-semibold ml-[14px]">
-              Dashboard
-            </span>
-          </div>
-          <div className="flex items-center cursor-pointer">
-            <Image
-              src={"/plan.svg"}
-              alt="dashboard icon"
-              width={24}
-              height={24}
-            />
-            <span className="text-primary text-[24px] font-semibold ml-[14px]">
-              Plano Produtivo
-            </span>
-          </div>
-          <div className="flex items-center cursor-pointer">
-            <Image
-              src={"/benefits.svg"}
-              alt="dashboard icon"
-              width={24}
-              height={24}
-            />
-            <span className="text-primary text-[24px] font-semibold ml-[14px]">
-              Seus benefícios
-            </span>
-          </div>
-          <div className="flex items-center cursor-pointer">
-            <Image
-              src={"/settings.svg"}
-              alt="dashboard icon"
-              width={24}
-              height={24}
-            />
-            <span className="text-primary text-[24px] font-semibold ml-[14px]">
-              Configurações
-            </span>
-          </div>
+    <div>
+
+    <div className="flex relative">
+      {activeMenu ? (
+        <div className="w-72 fixed sidebar dark:bg-secondary-dark-bg bg-white ">
+          <Sidebar />
         </div>
-        <button className="max-w-[197px] pt-[15px] pb-[15px] pl-[40px] pr-[40px] bg-secondary text-[15px] font-semibold rounded-xl hover:scale-105 mt-[120px] absolute bottom-8">
-          Fale Conosco
-        </button>
-      </div>
-      <div className="flex flex-col min-h-screen flex-1 p-[70px] bg-background overflow-y-scroll">
-        <div className="flex justify-between">
+      ) : (
+        <div className="w-0 dark:bg-secondary-dark-bg bg-green-300">
+          <Sidebar />
+        </div>
+      )}
+      <div
+        className={`dark:bg-main-bg bg-main-bg min-h-screen w-full p-2 ${
+          activeMenu ? "md:ml-72" : "flex-2"
+        }`}
+      >
+
+
+        <div className="flex  items-center justify-between">
           <span className="text-[#75B83B] text-[61px] font-semibold">
             Bem Vindo
           </span>
@@ -74,7 +60,7 @@ export default function Dashboard() {
             className="w-[64px] h-[64px]"
           />
         </div>
-        <div className="flex items-center w-[100%] px-[33px] py-[37px] rounded-[24px] border-apoioazulpistache border-[1px] bg-white justify-between">
+        <div className="flex flex-col md:flex-row items-center px-[33px] py-[37px] rounded-[24px] border-apoioazulpistache border-[1px] bg-white justify-between">
           <Image
             src={"/circle.svg"}
             width={51}
@@ -82,7 +68,7 @@ export default function Dashboard() {
             alt="circle"
             className="w-[51px] h-[51px]"
           />
-          <span className="ml-[26px] text-primary text-[28px] font-bold">
+          <span className="text-primary text-[28px] font-bold text-center">
             Faltam 60% do seu cadastro ser concluído para ter acesso a mais
             benefícios
           </span>
@@ -93,6 +79,7 @@ export default function Dashboard() {
             Continue seu Cadastro
           </Link>
         </div>
+        
         <div className="flex flex-col mt-[35px]">
           <div className="flex items-center">
             <Image
@@ -106,9 +93,9 @@ export default function Dashboard() {
               Seus benefícios
             </span>
           </div>
-          <div className="flex mt-[10px] gap-[40px]">
+          <div className="flex flex-wrap lg:flex-nowrap mt-[10px] gap-[40px]">
             <div className="flex flex-col">
-              <div className="bg-white rounded-[36px] border-[1px] border-[#C6E5DE] px-[30px] py-[37px] max-w-[290px]">
+              <div className="bg-white rounded-[36px] border-[1px] border-[#C6E5DE] px-[30px] py-[37px]">
                 <div className="w-[91px] h-[91px] bg-[#818181] rounded-[18px]"></div>
                 <span className="text-[#8C8C8C] text-[23px]">Benefícios X</span>
                 <p className="text-[#B8BCBC] text-[13px]">
@@ -121,7 +108,7 @@ export default function Dashboard() {
               </div>
             </div>
             <div className="flex flex-col">
-              <div className="bg-white rounded-[36px] border-[1px] border-[#C6E5DE] px-[30px] py-[37px] max-w-[290px]">
+              <div className="bg-white rounded-[36px] border-[1px] border-[#C6E5DE] px-[30px] py-[37px]">
                 <div className="w-[91px] h-[91px] bg-[#818181] rounded-[18px]"></div>
                 <span className="text-[#8C8C8C] text-[23px]">Benefícios X</span>
                 <p className="text-[#B8BCBC] text-[13px]">
@@ -134,7 +121,7 @@ export default function Dashboard() {
               </div>
             </div>
             <div className="flex flex-col">
-              <div className="bg-white rounded-[36px] border-[1px] border-[#C6E5DE] px-[30px] py-[37px] max-w-[290px]">
+              <div className="bg-white rounded-[36px] border-[1px] border-[#C6E5DE] px-[30px] py-[37px]">
                 <div className="w-[91px] h-[91px] bg-[#818181] rounded-[18px]"></div>
                 <span className="text-[#8C8C8C] text-[23px]">Benefícios X</span>
                 <p className="text-[#B8BCBC] text-[13px]">
@@ -148,8 +135,10 @@ export default function Dashboard() {
             </div>
           </div>
         </div>
-        <div className="flex flex-col mt-[36px]">
-          <div className="flex gap-8">
+
+
+        <div className="flex mt-[36px]">
+          <div className="flex flex-col md:flex-row gap-8">
             <div className="flex flex-col">
               <div className="flex items-center">
                 <Image
@@ -294,7 +283,10 @@ export default function Dashboard() {
             </div>
           </div>
         </div>
+
       </div>
-    </main>
+    </div>
+    </div>
+
   );
 }
