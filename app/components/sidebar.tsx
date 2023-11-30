@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { useFormState } from "../contexts/FormContext";
 import { IoIosClose } from "react-icons/io";
+import { RiGovernmentLine } from "react-icons/ri";
 
 const Sidebar = () => {
   const { activeMenu, setActiveMenu } = useFormState();
@@ -10,7 +11,13 @@ const Sidebar = () => {
       {activeMenu && (
         <>
           <div className="flex justify-between">
-            <Image src={"/logo_dark.svg"} alt="logo" width={62} height={62} priority/>
+            <Image
+              src={"/logo_dark.svg"}
+              alt="logo"
+              width={62}
+              height={62}
+              priority
+            />
             <button
               type="button"
               onClick={() => setActiveMenu((prevActiveMenu) => !prevActiveMenu)}
@@ -55,6 +62,14 @@ const Sidebar = () => {
               />
               <span className="text-primary text-[24px] font-semibold ml-[14px]">
                 Seus benefícios
+              </span>
+            </div>
+            <div className="flex items-center cursor-pointer">
+              <span className="text-primary text-3xl">
+                <RiGovernmentLine />
+              </span>
+              <span className="text-primary text-[24px] font-semibold ml-[14px]">
+                Regularização
               </span>
             </div>
             <div className="flex items-center cursor-pointer">

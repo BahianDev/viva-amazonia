@@ -10,14 +10,12 @@ export function CultureForm() {
   const {
     control,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm<TFormValues>({
     defaultValues: formData,
   });
 
   const onHandleFormSubmit = (data: TFormValues) => {
-    console.log("Seleção:", data.cultureType);
     setFormData((prev: any) => ({ ...prev, ...data }));
     onHandleNext();
   };

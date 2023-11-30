@@ -33,7 +33,7 @@ export default function ProductionPlan() {
           Culturas
         </span>
       </div>
-      <div className="flex bg-white flex-col min-h-screen flex-1 px-6 py-[70px] overflow-y-scroll">
+      <div className="flex bg-white flex-col min-h-screen flex-1 px-6 py-6 overflow-y-scroll">
         <ActiveStepFormComponent />
       </div>
     </main>

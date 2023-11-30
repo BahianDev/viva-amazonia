@@ -61,7 +61,7 @@ export function ProductionCycleFinalForm() {
       <input
         type="number"
         {...register("areaSize", { required: "Area size is required" })}
-        className="max-w-[412px] h-[51px] border border-[#D6D8D8] rounded-[16px] pl-2"
+        className="max-w-[412px] h-[51px] border border-[#D6D8D8] rounded-[16px] px-2"
       />
       {errors.areaSize && (
         <p className="text-red-500">{errors.areaSize.message}</p>
@@ -74,7 +74,7 @@ export function ProductionCycleFinalForm() {
       <input
         type="date"
         {...register("plantingDate", { required: "Planting date is required" })}
-        className="max-w-[412px] h-[51px] border border-[#D6D8D8] rounded-[16px] pl-2"
+        className="max-w-[412px] h-[51px] border border-[#D6D8D8] rounded-[16px] px-2"
       />
       {errors.plantingDate && (
         <p className="text-red-500">{errors.plantingDate.message}</p>
@@ -89,7 +89,7 @@ export function ProductionCycleFinalForm() {
         {...register("varietiesUsed", {
           required: "Varieties used is required",
         })}
-        className="max-w-[412px] h-[51px] border border-[#D6D8D8] rounded-[16px] pl-2"
+        className="max-w-[412px] h-[51px] border border-[#D6D8D8] rounded-[16px] px-2"
       />
       {errors.varietiesUsed && (
         <p className="text-red-500">{errors.varietiesUsed.message}</p>
@@ -168,7 +168,7 @@ export function ProductionCycleFinalForm() {
       {/* Submit Button */}
       <button
         type="submit"
-        className="max-w-[197px] pt-[15px] pb-[15px] pl-[40px] pr-[40px] bg-secondary text-[15px] font-semibold rounded-xl hover:scale-105 mt-[120px]"
+        className="max-w-[197px] pt-[15px] pb-[15px] pl-[40px] pr-[40px] bg-secondary text-[15px] font-semibold rounded-xl hover:scale-105"
       >
         Enviar
       </button>

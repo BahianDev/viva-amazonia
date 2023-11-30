@@ -18,7 +18,7 @@ export default function Home() {
           Fale Conosco
         </button>
       </div>
-      <div className="flex flex-col bg-white min-h-screen flex-1 px-6 py-[70px] overflow-y-scroll">
+      <div className="flex flex-col bg-white min-h-screen flex-1 px-6 py-6 overflow-y-scroll">
         <span className="text-primary text-6xl font-semibold">
           Faça Login
         </span>
@@ -30,14 +30,14 @@ export default function Home() {
           Senha
         </span>
         <input className="min-h-[73px] md:max-w-[90%] border-primary border-2 rounded-2xl focus:ring-secondary focus:ring-inset focus:ring-2 focus:shadow-secondary focus:border-secondary focus:outline-none" />
-        <span className="cursor-pointer text-secondary text-[13px] font-medium underline decoration-2">
+        <span className="cursor-pointer text-secondary text-[13px] font-medium underline decoration-2 mt-8">
           Esqueci minha sennha
         </span>
-        <Link  href={'/dashboard'} className="w-[197px] pt-[15px] pb-[15px] pl-[40px] pr-[40px] bg-secondary text-[15px] font-semibold rounded-xl hover:scale-105 mt-[120px]">
+        <Link  href={'/dashboard'} className="w-[197px] pt-[15px] pb-[15px] pl-[40px] pr-[40px] bg-secondary text-[15px] font-semibold rounded-xl hover:scale-105 mt-20">
           Faça seu Login
         </Link>
         <div className="flex flex-col justify-center items-center">
-          <button className="max-w-[230px] pt-[15px] pb-[15px] pl-[40px] pr-[40px] bg-primary text-secondary text-[15px] font-semibold rounded-xl hover:scale-105 mt-[100px]">
+          <button className="max-w-[230px] pt-[15px] pb-[15px] pl-[40px] pr-[40px] bg-primary text-secondary text-[15px] font-semibold rounded-xl hover:scale-105 mt-20">
             Faça seu Cadastro
           </button>
         </div>

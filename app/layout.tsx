@@ -25,7 +25,9 @@ export default function RootLayout({
             },
           }}
         />
-        <FormProvider>{children}</FormProvider>
+        <FormProvider>
+          {children}
+          </FormProvider>
       </body>
     </html>
   );
