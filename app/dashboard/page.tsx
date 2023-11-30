@@ -161,7 +161,7 @@ export default function Dashboard() {
                     Plano Produtivo
                   </span>
                 </div>
-                <div className="bg-white gap-[10px] flex flex-col px-[58px] py-[33px] rounded-[36px] min-h-[500px] mt-[10px] border-[#9ED3CE] border-[1px]">
+                <div className="bg-white gap-[10px] flex flex-col px-12 py-8 rounded-[36px] min-h-[500px] mt-[10px] border-[#9ED3CE] border-[1px]">
                   <span className="text-[20px] text-primary font-medium">
                     Produção
                   </span>
@@ -177,7 +177,7 @@ export default function Dashboard() {
                       <div
                         className={` ${
                           formData ? "hidden" : "flex"
-                        } items-center`}
+                        } items-center gap-2`}
                       >
                         <Image
                           src={"/lock.svg"}
@@ -186,7 +186,7 @@ export default function Dashboard() {
                           height={24}
                           className="w-[24px] h-[24px]"
                         />
-                        <span className="ml-[8px] text-[24px] font-medium">
+                        <span className="text-[24px] font-medium">
                           Plano Produtivo bloqueado
                         </span>
                       </div>
@@ -224,11 +224,11 @@ export default function Dashboard() {
 
               <div className="flex flex-col">
                 <div className="flex items-center">
-                  <span className="ml-[8px] text-[30px] text-primary font-medium">
+                  <span className="text-[30px] text-primary font-medium">
                     Regularizações
                   </span>
                 </div>
-                <div className="bg-white gap-[15px] flex flex-col px-[58px] py-[33px] rounded-[36px] min-h-[500px] mt-[10px] border-[#9ED3CE] border-[1px]">
+                <div className="bg-white gap-[15px] flex flex-col px-12 py-8 rounded-[36px] min-h-[500px] mt-[10px] border-[#9ED3CE] border-[1px]">
                   <Image
                     src={"/graph.svg"}
                     width={167}
