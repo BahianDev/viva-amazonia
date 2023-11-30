@@ -20,7 +20,8 @@ const Sidebar = () => {
             </button>
           </div>
           <div className="flex flex-col gap-[50px] mt-[100px]">
-            <div className="flex items-center cursor-pointer">
+            <div className="flex items-center cursor-pointer gap-2">
+              <div className="bg-secondary h-10 w-2 rounded-lg" />
               <Image
                 src={"/dashboard.svg"}
                 alt="dashboard icon"
