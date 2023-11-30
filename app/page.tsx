@@ -19,7 +19,7 @@ export default function Home() {
         </button>
       </div>
       <div className="flex flex-col bg-white min-h-screen flex-1 px-6 py-[70px] overflow-y-scroll">
-        <span className="text-primary text-[73px] font-semibold">
+        <span className="text-primary text-6xl font-semibold">
           Faça Login
         </span>
         <span className="text-primary text-[20px] font-semibold mt-[125px]">
