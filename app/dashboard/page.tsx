@@ -52,7 +52,7 @@ export default function Dashboard() {
           >
             <AiOutlineMenu />
           </span>
-          <span className="text-[#75B83B] text-5xl font-semibold">
+          <span className="text-[#75B83B] text-3xl md:text-5xl font-semibold text-center">
             Bem Vindo
           </span>
           <Image
@@ -150,12 +150,12 @@ export default function Dashboard() {
                   height={24}
                   className="w-[24px] h-[24px]"
                 />
-                <span className="ml-[8px] text-[30px] text-primary font-medium">
+                <span className="ml-[8px] text-3xl text-primary font-medium">
                   Plano Produtivo
                 </span>
               </div>
-              <div className="bg-white gap-[10px] flex flex-col px-12 py-8 rounded-[36px] min-h-[500px] mt-[10px] border-[#9ED3CE] border-[1px]">
-                <span className="text-[20px] text-primary font-medium">
+              <div className="bg-white gap-[10px] flex flex-col px-8 py-8 rounded-[36px] min-h-[500px] mt-[10px] border-[#9ED3CE] border-[1px]">
+                <span className="text-xl text-primary font-medium">
                   Produção
                 </span>
                 <div className="flex">
@@ -179,7 +179,7 @@ export default function Dashboard() {
                         height={24}
                         className="w-[24px] h-[24px]"
                       />
-                      <span className="text-[24px] font-medium">
+                      <span className="text-2xlfont-medium">
                         Plano Produtivo bloqueado
                       </span>
                     </div>
@@ -217,11 +217,11 @@ export default function Dashboard() {
 
             <div className="flex flex-col">
               <div className="flex items-center">
-                <span className="text-[30px] text-primary font-medium">
+                <span className="text-3xl text-primary font-medium">
                   Regularizações
                 </span>
               </div>
-              <div className="bg-white gap-[15px] flex flex-col px-12 py-8 rounded-[36px] min-h-[500px] mt-[10px] border-[#9ED3CE] border-[1px]">
+              <div className="bg-white gap-[15px] flex flex-col px-8 py-8 rounded-[36px] min-h-[500px] mt-[10px] border-[#9ED3CE] border-[1px]">
                 <Image
                   src={"/graph.svg"}
                   width={167}
