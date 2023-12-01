@@ -52,8 +52,9 @@ export default function Dashboard() {
           >
             <AiOutlineMenu />
           </span>
-          <div className="flex-grow"></div>
-
+          <span className="text-primary text-xl md:text-4xl font-semibold text-center">
+            Regularizaçao Ambiental e Fundiária
+          </span>
           <Image
             src={"/avatar.png"}
             width={64}
@@ -62,9 +63,6 @@ export default function Dashboard() {
             className="w-[64px] h-[64px]"
           />
         </div>
-        <span className="text-primary text-5xl font-semibold">
-          Regularizaçao Ambiental e Fundiária
-        </span>
 
         <div className="flex flex-wrap gap-4 py-6">
           <div className="flex flex-col items-center justify-center bg-primary w-96 h-72 gap-4 rounded-md relative">
