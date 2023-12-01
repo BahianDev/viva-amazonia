@@ -10,6 +10,10 @@ import {
 interface IFormContext {
   formData: any;
   setFormData: Dispatch<SetStateAction<any>>;
+  formEnvironmental: any;
+  setFormEnvironmental: Dispatch<SetStateAction<any>>;
+  formLand: any;
+  setFormLand: Dispatch<SetStateAction<any>>;
   onHandleBack: () => void;
   onHandleNext: () => void;
   step: number;
@@ -21,14 +25,18 @@ interface IFormContext {
 
 const FormContext = createContext<IFormContext>({
   formData: {},
+  setFormData: () => {},
+  formEnvironmental: {},
+  setFormEnvironmental: () => {},
+  formLand: {},
+  setFormLand: () => {},
   onHandleBack: () => {},
   onHandleNext: () => {},
-  setFormData: () => {},
   step: 0,
   activeMenu: true,
   setActiveMenu: () => {},
   screenSize: undefined,
-  setScreenSize: () => {}
+  setScreenSize: () => {},
 });
 
 interface IProps {
@@ -37,10 +45,12 @@ interface IProps {
 
 export function FormProvider({ children }: IProps) {
   const [formData, setFormData] = useState();
+  const [formEnvironmental, setFormEnvironmental] = useState();
+  const [formLand, setFormLand] = useState();
+
   const [step, setStep] = useState(1);
   const [activeMenu, setActiveMenu] = useState(true);
   const [screenSize, setScreenSize] = useState<undefined | number>(undefined);
-
 
   function onHandleNext() {
     setStep((prev) => prev + 1);
@@ -61,7 +71,11 @@ export function FormProvider({ children }: IProps) {
         activeMenu,
         setActiveMenu,
         setScreenSize,
-        screenSize
+        screenSize,
+        formEnvironmental,
+        setFormEnvironmental,
+        formLand,
+        setFormLand,
       }}
     >
       {children}

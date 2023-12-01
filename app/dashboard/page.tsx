@@ -32,7 +32,7 @@ export default function Dashboard() {
   return (
     <div className="flex relative">
       {activeMenu ? (
-        <div className="w-72 fixed sidebar bg-white ">
+        <div className="w-80 fixed sidebar bg-white ">
           <Sidebar />
         </div>
       ) : (
@@ -42,7 +42,7 @@ export default function Dashboard() {
       )}
       <div
         className={`bg-[#F9F9F9] min-h-screen w-full px-6 py-6 ${
-          activeMenu ? "md:ml-72" : "flex-2"
+          activeMenu ? "md:ml-80" : "flex-2"
         }`}
       >
         <div className="flex items-center justify-between">

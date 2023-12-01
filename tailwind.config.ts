@@ -11,9 +11,13 @@ const config: Config = {
       padding: {
         "80px": "80px",
       },
+      background: {
+      },
       colors: {
         primary: "#06414E",
         apoiosea: "#9ED3CE",
+        blackTransparent: "rgba(0, 0, 0, 0.50)",
+        blue: "#2B8C83",
         secondary: "#BCDC49",
         gray: "#D6D8D8",
         background: "#F9F9F9",
@@ -22,9 +26,10 @@ const config: Config = {
           "linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.98) 100%)",
       },
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        'map':
+          "url('/map.png')",
+          loading: 'linear-gradient(270deg, #BDDD4D 0.02%, #CBFFA7 49.3%, #9DD4CF 97.56%)',
+
       },
     },
   },

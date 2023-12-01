@@ -1,11 +1,20 @@
-import React from "react";
+'use client'
+
+import React, { useState } from "react";
 import Image from "next/image";
 import { useFormState } from "../contexts/FormContext";
 import { IoIosClose } from "react-icons/io";
 import { RiGovernmentLine } from "react-icons/ri";
+import Link from "next/link";
+import { usePathname } from 'next/navigation'
+
 
 const Sidebar = () => {
+  const pathname = usePathname()
+
   const { activeMenu, setActiveMenu } = useFormState();
+
+  const [pageActive, setPageActive] = useState(pathname);
   return (
     <div className="h-screen md:overflow-hidden overflow-auto md:hover:overflow-auto px-6 py-6">
       {activeMenu && (
@@ -27,8 +36,12 @@ const Sidebar = () => {
             </button>
           </div>
           <div className="flex flex-col gap-[50px] mt-[100px]">
-            <div className="flex items-center cursor-pointer gap-2">
-              <div className="bg-secondary h-10 w-2 rounded-lg" />
+            <Link
+              href={"/dashboard"}
+              onClick={() => setPageActive("dashboard")}
+              className={`flex items-center cursor-pointer ${pageActive === '/dashboard' && 'gap-2'}`}
+            >
+              { pageActive === '/dashboard' && <div className="bg-secondary h-10 w-2 rounded-lg" />}
               <Image
                 src={"/dashboard.svg"}
                 alt="dashboard icon"
@@ -39,8 +52,13 @@ const Sidebar = () => {
               <span className="text-primary text-[24px] font-semibold ml-[14px]">
                 Dashboard
               </span>
-            </div>
-            <div className="flex items-center cursor-pointer">
+            </Link>
+            <Link
+              href={"/plan"}
+              className={`flex items-center cursor-pointer ${pageActive === '/plan' && 'gap-2'}`}
+            >
+              { pageActive === '/plan' && <div className="bg-secondary h-10 w-2 rounded-lg" />}
+
               <Image
                 src={"/plan.svg"}
                 alt="dashboard icon"
@@ -51,7 +69,20 @@ const Sidebar = () => {
               <span className="text-primary text-[24px] font-semibold ml-[14px]">
                 Plano Produtivo
               </span>
-            </div>
+            </Link>
+            <Link
+              href={"/regularization"}
+              className={`flex items-center cursor-pointer ${pageActive === '/regularization' && 'gap-2'}`}
+            >
+              { pageActive === '/regularization' && <div className="bg-secondary h-10 w-2 rounded-lg" />}
+
+              <span className="text-primary text-3xl">
+                <RiGovernmentLine />
+              </span>
+              <span className="text-primary text-[24px] font-semibold ml-[14px]">
+                Regularização
+              </span>
+            </Link>
             <div className="flex items-center cursor-pointer">
               <Image
                 src={"/benefits.svg"}
@@ -64,14 +95,7 @@ const Sidebar = () => {
                 Seus benefícios
               </span>
             </div>
-            <div className="flex items-center cursor-pointer">
-              <span className="text-primary text-3xl">
-                <RiGovernmentLine />
-              </span>
-              <span className="text-primary text-[24px] font-semibold ml-[14px]">
-                Regularização
-              </span>
-            </div>
+
             <div className="flex items-center cursor-pointer">
               <Image
                 src={"/settings.svg"}
