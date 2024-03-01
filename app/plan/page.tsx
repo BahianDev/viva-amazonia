@@ -101,7 +101,7 @@ export default function Plan() {
           {/*Land Name */}
           <div className="flex items-center gap-4 mt-2">
             <span className="text-secondary font-bold text-5xl md:text-7xl">
-              Sítio Fulano
+              Sítio São Matheus
             </span>
             <Image
               src={"/edit.svg"}
