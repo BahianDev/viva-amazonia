@@ -10,6 +10,7 @@ import {
 interface IFormContext {
   formData: any;
   setFormData: Dispatch<SetStateAction<any>>;
+  setStep: Dispatch<SetStateAction<any>>;
   formEnvironmental: any;
   setFormEnvironmental: Dispatch<SetStateAction<any>>;
   formLand: any;
@@ -26,6 +27,7 @@ interface IFormContext {
 const FormContext = createContext<IFormContext>({
   formData: {},
   setFormData: () => {},
+  setStep: () => {},
   formEnvironmental: {},
   setFormEnvironmental: () => {},
   formLand: {},
@@ -76,6 +78,7 @@ export function FormProvider({ children }: IProps) {
         setFormEnvironmental,
         formLand,
         setFormLand,
+        setStep
       }}
     >
       {children}

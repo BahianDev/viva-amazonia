@@ -7,6 +7,7 @@ import { useFormState } from "../../contexts/FormContext";
 import { FirstStep } from "@/app/components/form/land/firstStep";
 import { SecondStep } from "@/app/components/form/land/secondStep";
 import { ThirdStep } from "@/app/components/form/land/thirdStep";
+import { useEffect } from "react";
 
 function ActiveStepFormComponent() {
   const { step } = useFormState();
@@ -25,6 +26,12 @@ function ActiveStepFormComponent() {
 }
 
 export default function Land() {
+  const { step, setStep } = useFormState();
+
+  useEffect(() => {
+    setStep(1);
+  }, []);
+
   return (
     <main className="flex max-h-screen">
       <div className="hidden md:flex  flex-col justify-between h-screen bg-primary md:overflow-hidden overflow-auto md:hover:overflow-auto px-6 py-6">
