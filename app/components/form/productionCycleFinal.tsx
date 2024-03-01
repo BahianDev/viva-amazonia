@@ -1,4 +1,5 @@
 import { useFormState } from "@/app/contexts/FormContext";
+import { api } from "@/app/services/api";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 
@@ -11,7 +12,7 @@ type TFormValues = {
 };
 
 export function ProductionCycleFinalForm() {
-  const { onHandleNext, setFormData, onHandleBack, formData } = useFormState();
+  const { onHandleNext, formData } = useFormState();
 
   const {
     handleSubmit,
@@ -20,31 +21,18 @@ export function ProductionCycleFinalForm() {
   } = useForm<TFormValues>();
 
   const onHandleFormSubmit = async (data: TFormValues) => {
-    const toastId = toast.loading("Enviando...");
+    toast.loading("Enviando...");
 
     const body = { ...formData, ...data };
     const request = {
-      cultureType: body.cultureType,
-      productionCycle: body.productionCycle,
-      areaSize: body.areaSize,
-      plantingDate: new Date(body.plantingDate).getTime(),
-      varietiesUsed: body.varietiesUsed,
-      fertilizersUsed: Boolean(body.fertilizersUsed),
-      pesticidesUsed: Boolean(body.pesticidesUsed),
+      type: body.cultureType,
+      cycle: body.productionCycle,
+      sizePlantedArea: Number(body.areaSize),
+      datePlantedArea: new Date(body.plantingDate),
     };
 
-    console.log(request);
+    await api.post("production", request)
 
-    const res = await fetch("/api/productionCycle", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(request),
-    });
-
-    const response = await res.json();
-    setFormData((prev: any) => ({ ...prev, ...data, ...response }));
     toast.dismiss();
     onHandleNext();
   };

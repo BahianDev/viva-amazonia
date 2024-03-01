@@ -3,8 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 
 export function Success() {
-  const { onHandleNext, setFormData, onHandleBack, formData } = useFormState();
-
   return (
     <div className="flex gap-1 flex-col space-y-3 items-center">
       <div className="flex items-center justify-center w-[307px] h-[307px] bg-secondary rounded-full">

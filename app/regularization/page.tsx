@@ -45,7 +45,7 @@ export default function Dashboard() {
           activeMenu ? "md:ml-80" : "flex-2"
         }`}
       >
-        <div className="flex items-center justify-betwee">
+        <div className="flex items-center justify-between">
           <span
             className="flex md:hidden rounded-full text-4xl"
             onClick={() => setActiveMenu((prevActiveMenu) => !prevActiveMenu)}
@@ -96,7 +96,7 @@ export default function Dashboard() {
               href={"/regularization/land"}
               className="pt-[8px] pb-[8px] pl-[22px] pr-[22px] text-secondary bg-primary text-[15px] font-semibold rounded-xl hover:scale-105 mt-[15px]"
             >
-              Baixar Conteúdo
+              Continuar
             </Link>
           </div>
         </div>

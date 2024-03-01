@@ -1,5 +1,7 @@
 import { useFormState } from "@/app/contexts/FormContext";
+import { api } from "@/app/services/api";
 import { useForm } from "react-hook-form";
+import toast from "react-hot-toast";
 
 type TFormValues = {
   hasSurplusNativeVegetation: boolean;
@@ -9,7 +11,7 @@ type TFormValues = {
 };
 
 export function SecondStep() {
-  const { onHandleNext, setFormEnvironmental } = useFormState();
+  const { onHandleNext, setFormEnvironmental, formEnvironmental } = useFormState();
 
   const {
     handleSubmit,
@@ -19,6 +21,16 @@ export function SecondStep() {
 
   const onHandleFormSubmit = async (data: TFormValues) => {
     setFormEnvironmental((prev: any) => ({ ...prev, ...data }));
+    const formData = {...formEnvironmental, ...data}
+    toast.loading("Enviando")
+
+    const body =  {
+      carNumber: formData.CARcode,
+      isLegalReserve: Boolean(formData.legalReserveArea)
+    }
+
+    await api.post("environmental", body)
+    toast.dismiss()
     onHandleNext();
   };
 

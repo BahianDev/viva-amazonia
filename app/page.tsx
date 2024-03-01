@@ -4,13 +4,13 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className="flex max-h-screen">
-      <div className="hidden md:flex  flex-col justify-between h-screen bg-primary md:overflow-hidden overflow-auto md:hover:overflow-auto px-6 py-6">
+      <div className="hidden md:flex  flex-col justify-between h-screen bg-hero bg-cover bg-center md:overflow-hidden overflow-auto md:hover:overflow-auto px-6 py-6">
         <Image src={"/logo.svg"} alt="logo" width={62} height={62} />
-        <div className="flex flex-col">
+        <div className="flex flex-col bg-blackTransparent rounded-lg p-2">
           <span className="text-white text-6xl font-semibold max-w-[400px]">
             Comece sua Jornada Aqui
           </span>
-          <span className="text-apoiosea text-[26px] text-left font-normal max-w-[327px] mt-[35px]">
+          <span className="text-gray text-[26px] text-left font-normal max-w-[327px] mt-[35px]">
             Descubra como sua propriedade pode crescer
           </span>
         </div>

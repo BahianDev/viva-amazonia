@@ -29,6 +29,7 @@ const config: Config = {
         'map':
           "url('/map.png')",
           loading: 'linear-gradient(270deg, #BDDD4D 0.02%, #CBFFA7 49.3%, #9DD4CF 97.56%)',
+          hero: "url('/hero.jpeg')"
 
       },
     },
