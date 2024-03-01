@@ -99,11 +99,16 @@ export default function Dashboard() {
           <div className="flex flex-wrap lg:flex-nowrap mt-[10px] gap-[40px]">
             <div className="flex flex-col">
               <div className="bg-white rounded-[36px] border-[1px] border-[#C6E5DE] px-[30px] py-[37px]">
-                <div className="w-[91px] h-[91px] bg-[#818181] rounded-[18px]"></div>
-                <span className="text-[#8C8C8C] text-[23px]">Benefícios X</span>
+                <div className="w-[91px] h-[91px] bg-[#818181] rounded-[18px] p-5">
+                  <div className="w-full h-full rounded-full border-2 border-white" />
+                </div>
+                <span className="text-[#8C8C8C] text-[23px]">
+                  Crédito AFEAM
+                </span>
                 <p className="text-[#B8BCBC] text-[13px]">
-                  Benefícios XBenefícios XBenefícios XBenefícios XBenefícios
-                  XBenefícios XBenefícios X
+                  O referido programa +Crédito Amazonas financia capital de giro
+                  e custeio, bem como as principais despesas/custos operacionais
+                  como folha de pagamento,
                 </p>
                 <button className="pt-[8px] pb-[8px] pl-[22px] pr-[22px] bg-[#9E9E9E] text-[15px] text-[#818181] font-semibold rounded-xl hover:scale-105 mt-[16px]">
                   Conclua Seu Cadastro
@@ -112,11 +117,13 @@ export default function Dashboard() {
             </div>
             <div className="flex flex-col">
               <div className="bg-white rounded-[36px] border-[1px] border-[#C6E5DE] px-[30px] py-[37px]">
-                <div className="w-[91px] h-[91px] bg-[#818181] rounded-[18px]"></div>
-                <span className="text-[#8C8C8C] text-[23px]">Benefícios X</span>
+                <div className="w-[91px] h-[91px] bg-[#818181] rounded-[18px] p-5">
+                  <div className="w-full h-full rounded-full border-2 border-white" />
+                </div>{" "}
+                <span className="text-[#8C8C8C] text-[23px]">Crédito BASA</span>
                 <p className="text-[#B8BCBC] text-[13px]">
-                  Benefícios XBenefícios XBenefícios XBenefícios XBenefícios
-                  XBenefícios XBenefícios X
+                  A nossa linha crédito mais acessada pelos empreendedores
+                  industriais além de aumentar a sustentabilidade do negócio.
                 </p>
                 <button className="pt-[8px] pb-[8px] pl-[22px] pr-[22px] bg-[#9E9E9E] text-[15px] text-[#818181] font-semibold rounded-xl hover:scale-105 mt-[16px]">
                   Conclua Seu Cadastro
@@ -125,11 +132,16 @@ export default function Dashboard() {
             </div>
             <div className="flex flex-col">
               <div className="bg-white rounded-[36px] border-[1px] border-[#C6E5DE] px-[30px] py-[37px]">
-                <div className="w-[91px] h-[91px] bg-[#818181] rounded-[18px]"></div>
-                <span className="text-[#8C8C8C] text-[23px]">Benefícios X</span>
+                <div className="w-[91px] h-[91px] bg-[#818181] rounded-[18px] p-5">
+                  <div className="w-full h-full rounded-full border-2 border-white" />
+                </div>{" "}
+                <span className="text-[#8C8C8C] text-[23px]">
+                  Créditos de Carbono
+                </span>
                 <p className="text-[#B8BCBC] text-[13px]">
-                  Benefícios XBenefícios XBenefícios XBenefícios XBenefícios
-                  XBenefícios XBenefícios X
+                  Os créditos e compensações de carbono são obtidos por meio de
+                  diversas iniciativas e projetos que tentam reduzir as
+                  emissões.
                 </p>
                 <button className="pt-[8px] pb-[8px] pl-[22px] pr-[22px] bg-[#9E9E9E] text-[15px] text-[#818181] font-semibold rounded-xl hover:scale-105 mt-[16px]">
                   Conclua Seu Cadastro
