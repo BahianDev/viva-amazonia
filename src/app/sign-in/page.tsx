@@ -53,6 +53,7 @@ export default function SignIn() {
         onSubmit={onSubmit}
         className="flex flex-col bg-white min-h-screen overflow-y-scroll w-full items-center justify-center gap-10"
       >
+        <Image className="md:hidden" src={"/logo.svg"} alt="logo" width={62} height={62} />
         <span className="text-primary text-6xl font-semibold">Faça Login</span>
 
         <div className="flex flex-col w-full items-center gap-5 max-w-lg p-2">
