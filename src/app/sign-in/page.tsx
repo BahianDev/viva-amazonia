@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useRef } from "react";
+import toast from "react-hot-toast";
 
 export default function SignIn() {
   const router = useRouter();
@@ -19,9 +20,11 @@ export default function SignIn() {
       redirect: false,
     });
 
-    if (!res?.error) {
-      router.push("http://localhost:3000");
+    if (!res?.ok) {
+      return toast.error("Email ou senha incorretos");
     }
+
+    router.push("http://localhost:3000");
   };
 
   return (
@@ -54,7 +57,8 @@ export default function SignIn() {
 
         <div className="flex flex-col w-full items-center gap-5 max-w-lg p-2">
           <input
-            placeholder="CPF"
+            placeholder="Email"
+            type="email"
             onChange={(e) => (userName.current = e.target.value)}
             className="h-14 w-full border-primary px-5 border-2 rounded-2xl focus:ring-secondary focus:ring-inset focus:ring-2 focus:shadow-secondary focus:border-secondary focus:outline-none"
           />
@@ -76,7 +80,10 @@ export default function SignIn() {
         </div>
 
         <div className="flex flex-col justify-center items-center">
-          <Link href={'/signup'} className="py-4 px-10 bg-primary text-secondary text-[15px] font-semibold rounded-xl hover:scale-105 mt-10">
+          <Link
+            href={"/sign-up"}
+            className="py-4 px-10 bg-primary text-secondary text-[15px] font-semibold rounded-xl hover:scale-105 mt-10"
+          >
             Faça seu Cadastro
           </Link>
         </div>

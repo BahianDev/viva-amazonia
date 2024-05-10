@@ -6,8 +6,8 @@ import { formatHash } from "./utils/formatHash";
 import Sidebar from "..//components/sidebar";
 import { useEffect } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
-import { getServerSession } from "next-auth";
-import { useSession } from "next-auth/react";
+import { useSession, signOut } from "next-auth/react";
+
 
 export default function Dashboard() {
   const { data } = useSession();
@@ -60,6 +60,7 @@ export default function Dashboard() {
             Bem Vindo, {data?.user?.name}
           </span>
           <Image
+            onClick={() => signOut()}
             src={"/avatar.png"}
             width={64}
             height={64}
