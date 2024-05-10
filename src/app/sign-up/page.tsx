@@ -48,7 +48,7 @@ export default function SignIn() {
 
       toast.success("Usuário criado com sucesso!");
 
-      router.push("http://localhost:3000/");
+      router.push("https://viva-amazonia.vercel.app/");
     } catch (error) {
       return toast.error("Algo de errado aconteceu!");
     }
