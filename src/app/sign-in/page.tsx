@@ -24,7 +24,7 @@ export default function SignIn() {
       return toast.error("Email ou senha incorretos");
     }
 
-    router.push("http://localhost:3000");
+    router.push("https://viva-amazonia.vercel.app/");
   };
 
   return (
