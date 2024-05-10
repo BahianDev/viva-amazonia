@@ -7,7 +7,7 @@ import CredentialsProvider from "next-auth/providers/credentials";
 
 async function refreshToken(token: any): Promise<JWT> {
     console.log("refresh");
-    const res = await fetch("http://localhost:3001/auth/refresh", {
+    const res = await fetch("https://personal-beta-b666c12c6edc.herokuapp.com/auth/refresh", {
       method: "POST",
       headers: {
         authorization: `Bearer ${token.refreshToken}`,
@@ -41,7 +41,7 @@ export const authOptions: NextAuthOptions = {
         async authorize(credentials, req) {
           if (!credentials?.username || !credentials?.password) return null;
           const { username, password } = credentials;
-          const res = await fetch("http://localhost:3001/auth/login", {
+          const res = await fetch("https://personal-beta-b666c12c6edc.herokuapp.com/auth/login", {
             method: "POST",
             body: JSON.stringify({
               username,
