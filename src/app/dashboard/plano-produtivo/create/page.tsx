@@ -35,13 +35,8 @@ const schema = z.object({
 
 type Inputs = z.infer<typeof schema>;
 
-const TeacherForm = ({
-  type,
-  data,
-}: {
-  type: "create" | "update";
-  data?: any;
-}) => {
+const TeacherForm = () => {
+  let data: any;
   const {
     control,
     register,
