@@ -37,7 +37,7 @@ const SinglePlanoProdutivoPage = ({
           <div className="bg-lamaSky py-6 px-4 rounded-md flex-1 flex gap-4">
             <div className="w-1/3">
               <Image
-                src="https://images.pexels.com/photos/5414817/pexels-photo-5414817.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                src="https://www.freeiconspng.com/thumbs/profile-icon-png/profile-icon-9.png"
                 alt=""
                 width={144}
                 height={144}
