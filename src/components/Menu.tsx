@@ -55,7 +55,7 @@ const menuItems = [
 ];
 
 const Menu = () => {
-  const pathname = usePathname(); // Obter a rota atual
+  const pathname = usePathname(); 
 
   return (
     <div className="mt-4 text-sm">
