@@ -36,7 +36,7 @@ const menuItems = [
     ],
   },
   {
-    title: "OTHER",
+    title: "OUTROS",
     items: [
       {
         icon: "/profile.png",

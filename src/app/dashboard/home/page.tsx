@@ -5,6 +5,7 @@ import { beneficiosData } from "@/lib/data";
 import { useQuery } from "@tanstack/react-query";
 import { api } from "@/services/api";
 import TipoAreaChart from "@/components/TipoAreaChart";
+import { Bar, BarChart, ResponsiveContainer, Tooltip } from "recharts";
 
 const HomePage = () => {
   const { data: info } = useQuery({
@@ -16,8 +17,27 @@ const HomePage = () => {
   });
 
   const data = [
-    { name: "Group A", value: 92, fill: "#C3EBFA" },
-    { name: "Group B", value: 8, fill: "#FAE27C" },
+    {
+      name: "Ambiental",
+      uv: 4000,
+      pv: 2400,
+      amt: 2400,
+      fill: '#C3EBFA'
+    },
+    {
+      name: "Fundiária",
+      uv: 3000,
+      pv: 1398,
+      amt: 2210,
+      fill: '#CFCEFF'
+    },
+    {
+      name: "Sanitária",
+      uv: 2000,
+      pv: 9800,
+      amt: 2290,
+      fill: '#FAE27C'
+    },
   ];
 
   return (
@@ -84,20 +104,19 @@ const HomePage = () => {
                 Regularizações
               </span>
             </div>
-            <div className="bg-white gap-3 justify-between flex flex-col p-5 rounded-2xl mt-3 border-2 min-h-[489px]">
-              <Image
-                src={"/graph.svg"}
-                width={144}
-                height={144}
-                className="w-36 h-36"
-                alt="grah"
-              />
+            <div className="bg-white gap-3 justify-between flex flex-col p-5 rounded-2xl mt-3 border-2 h-full">
+              <ResponsiveContainer width="100%" height="100%">
+                <BarChart width={150} height={40} data={data}>
+                  <Bar dataKey="uv" />
+                </BarChart>
+              </ResponsiveContainer>
+
               <span className="text-lg text-primary font-medium">
                 Regularizações
               </span>
               <div className="flex items-center gap-20 justify-between">
                 <div className="flex items-center">
-                  <span className="text-sm font-semibold text-limeGreen">
+                  <span className="text-sm font-semibold bg-lamaSky px-2 rounded-2xl">
                     Fundiária
                   </span>
                   <div className="rounded-full h-6 w-6 ml-[12px] bg-lamaSky text-[6px] flex items-center justify-center">
@@ -105,12 +124,12 @@ const HomePage = () => {
                   </div>
                 </div>
                 <span className="text-primary text-sm font-medium">
-                  Status: Concluído
+                  Quant: 0
                 </span>
               </div>
               <div className="flex items-center gap-20 justify-between">
                 <div className="flex items-center">
-                  <span className="text-sm font-semibold text-limeGreen">
+                  <span className="text-sm font-semibold bg-lamaPurple px-2 rounded-2xl">
                     Ambiental
                   </span>
                   <div className="rounded-full h-6 w-6 ml-[12px] bg-lamaSky text-[6px] flex items-center justify-center">
@@ -118,12 +137,12 @@ const HomePage = () => {
                   </div>
                 </div>
                 <span className="text-primary text-sm font-medium">
-                  Status: Concluído
+                  Quant: 0
                 </span>
               </div>
               <div className="flex items-center gap-20 justify-between">
                 <div className="flex items-center">
-                  <span className="text-sm font-semibold text-limeGreen">
+                  <span className="text-sm font-semibold bg-lamaYellow px-2 rounded-xl">
                     Sanitária
                   </span>
                   <div className="rounded-full h-6 w-6 ml-[12px] bg-lamaSky text-[6px] flex items-center justify-center">
@@ -131,7 +150,7 @@ const HomePage = () => {
                   </div>
                 </div>
                 <span className="text-primary text-sm font-medium">
-                  Status: Concluído
+                  Quant: 0
                 </span>
               </div>
               <button className="p-2 bg-midGray text-sm text-gray-200 font-semibold rounded-xl hover:scale-105 mt-9">
