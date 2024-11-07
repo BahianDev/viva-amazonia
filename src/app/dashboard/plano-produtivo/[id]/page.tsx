@@ -138,7 +138,7 @@ const SinglePlanoProdutivoPage = ({
         {/* BOTTOM */}
         <div className="mt-4 bg-white rounded-md p-4 h-[800px]">
           <h1>Área</h1>
-          <GoogleMapComponent/>
+          <GoogleMapComponent lat={planoProdutivo?.lat} lng={planoProdutivo?.lng}/>
         </div>
       </div>
       {/* RIGHT */}

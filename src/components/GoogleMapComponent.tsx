@@ -18,7 +18,12 @@ const center = {
   lng: -63.7369498,
 };
 
-const GoogleMapComponent = () => {
+interface IGoogleMapComponent {
+  lat: string;
+  lng: string;
+}
+
+const GoogleMapComponent = ({ lat, lng }: IGoogleMapComponent) => {
   const { isLoaded } = useLoadScript({
     googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY as string,
   });
@@ -30,17 +35,25 @@ const GoogleMapComponent = () => {
         mapTypeId: "satellite",
         zoomControl: false,
         disableDoubleClickZoom: true,
-        maxZoom:14,
+        maxZoom: 14,
         minZoom: 14,
         fullscreenControl: false,
         streetViewControl: false,
-        mapTypeControl: false
+        mapTypeControl: false,
       }}
       mapContainerStyle={containerStyle}
-      center={center}
+      center={{
+        lat: Number(lat),
+        lng: Number(lng),
+      }}
       zoom={14}
     >
-      <Marker position={center} />
+      <Marker
+        position={{
+          lat: Number(lat),
+          lng: Number(lng),
+        }}
+      />
     </GoogleMap>
   );
 };
