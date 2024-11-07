@@ -1,6 +1,7 @@
 "use client";
 
 import Announcements from "@/components/Announcements";
+import GoogleMapComponent from "@/components/GoogleMapComponent";
 import Performance from "@/components/Performance";
 import { api } from "@/services/api";
 import { useQuery } from "@tanstack/react-query";
@@ -136,8 +137,8 @@ const SinglePlanoProdutivoPage = ({
         </div>
         {/* BOTTOM */}
         <div className="mt-4 bg-white rounded-md p-4 h-[800px]">
-          <h1>Detalhes</h1>
-          <></>
+          <h1>Área</h1>
+          <GoogleMapComponent/>
         </div>
       </div>
       {/* RIGHT */}

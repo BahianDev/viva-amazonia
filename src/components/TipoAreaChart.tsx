@@ -1,10 +1,7 @@
 "use client";
-import Image from "next/image";
 import {
   PieChart,
   Pie,
-  Sector,
-  Cell,
   ResponsiveContainer,
   Tooltip,
 } from "recharts";

@@ -351,16 +351,16 @@ export const beneficiosData = [
 
 export const tipoAreaOptions = [
   {
-    label: "Consolidada",
-    value: "Consolidada",
+    label: "RL",
+    value: "RL",
   },
   {
-    label: "Reserva Legal",
-    value: "ReservaLegal",
+    label: "UAS",
+    value: "UAS",
   },
   {
-    label: "Uso Alternativo do Solo",
-    value: "UsoAlternativoDoSolo",
+    label: "C",
+    value: "C",
   },
 ]
 
@@ -459,6 +459,10 @@ export const especiesMudasFlorestaisOptions = [
   {
     label: "Andiroba",
     value: "Andiroba",
+  },
+  {
+    label: "Outro",
+    value: "Outro",
   },
 ]
 
