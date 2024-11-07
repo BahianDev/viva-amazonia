@@ -20,7 +20,7 @@ export default function Dashboard() {
             Regularização Ambiental
           </span>
           <Link
-            href={"/regularizacao/ambiental"}
+            href={"/dashboard/regularizacao/ambiental"}
             className="pt-[8px] pb-[8px] pl-[22px] pr-[22px] text-primary bg-lamaSkyLight text-[15px] font-semibold rounded-xl hover:scale-105 mt-[15px]"
           >
             Continuar

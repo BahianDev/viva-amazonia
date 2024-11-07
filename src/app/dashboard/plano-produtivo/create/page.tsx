@@ -36,7 +36,7 @@ const schema = z.object({
 
 type Inputs = z.infer<typeof schema>;
 
-const TeacherForm = () => {
+const PlanoProdutivoForm = () => {
   let data: any;
   const {
     control,
@@ -170,14 +170,12 @@ const TeacherForm = () => {
         label="Espécies de Mudas Florestais"
         name="especiesMudasFlorestais"
         register={register}
-        // error={errors?.especiesMudasFlorestais}
       />
       <CheckBoxInputField
         options={especiesMudasFrutiferasOptions}
         label="Espécies de Mudas Frutíferas"
         name="especiesMudasFrutiferas"
         register={register}
-        // error={errors?.especiesMudasFrutiferas}
       />
 
       {mudaFlorestalSelecionada &&
@@ -216,4 +214,4 @@ const TeacherForm = () => {
   );
 };
 
-export default TeacherForm;
+export default PlanoProdutivoForm;

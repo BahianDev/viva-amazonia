@@ -364,6 +364,26 @@ export const tipoAreaOptions = [
   },
 ]
 
+export const comoCompensarOptions = [
+  {
+    label: "Aquisição de Cota de Reserva Ambiental (CRA)",
+    value: "AquisicaoCota",
+  },
+  {
+    label: "Arrendamento de área sob servidão ambiental ou reserva legal",
+    value: "Arrendamento",
+  },
+  {
+    label: "Doação ao poder público de área pendente de regularização fundiária",
+    value: "Doacao",
+  },
+  {
+    label: "Cadastramento de outra área equivalente e excedente à Reserva Legal",
+    value: "Cadastramento",
+  },
+
+]
+
 export const cicloProducaoOptios = [
   {
     label: "Anual",
