@@ -38,7 +38,7 @@ export default function Dashboard() {
             Regularização Fundiária
           </span>
           <Link
-            href={"/regularizacao/fundiaria"}
+            href={"/dashboard/regularizacao/fundiaria"}
             className="pt-[8px] pb-[8px] pl-[22px] pr-[22px] text-secondary bg-lamaPurpleLight text-[15px] font-semibold rounded-xl hover:scale-105 mt-[15px]"
           >
             Continuar
