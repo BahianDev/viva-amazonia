@@ -48,7 +48,7 @@ const RegularizacaoFundiariaForm = () => {
     >
       <RadioInputField
         control={control}
-        label=" Você tem CAF/DAP?"
+        label="Você tem CAF/DAP?"
         name="possuiCafDap"
         error={errors?.possuiCafDap}
       />

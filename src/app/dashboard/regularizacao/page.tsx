@@ -5,7 +5,6 @@ import { MdOutlineHealthAndSafety } from "react-icons/md";
 import Link from "next/link";
 
 export default function Dashboard() {
-
   return (
     <div className="bg-white p-4 rounded-md flex-1 m-4 mt-0">
       <div className="flex flex-wrap gap-4 py-6">
@@ -56,7 +55,7 @@ export default function Dashboard() {
             Regularização Sanitária
           </span>
           <Link
-            href={"/regularizacao/sanitaria"}
+            href={"/dashboard/regularizacao/sanitaria"}
             className="pt-[8px] pb-[8px] pl-[22px] pr-[22px] text-primary bg-lamaPurpleLight text-[15px] font-semibold rounded-xl hover:scale-105 mt-[15px]"
           >
             Continuar
